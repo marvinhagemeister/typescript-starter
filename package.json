@@ -55,5 +55,10 @@
       "lcovonly"
     ],
     "all": true
+  },
+  "config": {
+    "husky": {
+      "silent": true
+    }
   }
 }
