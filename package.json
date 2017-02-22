@@ -21,7 +21,7 @@
     "@types/chai": "^3.4.35",
     "@types/mocha": "^2.2.39",
     "chai": "^3.5.0",
-    "husky-dontbark": "^1.0.0",
+    "husky": "^0.13.1",
     "mocha": "^3.2.0",
     "nyc": "^10.1.2",
     "rimraf": "^2.6.0",
@@ -55,10 +55,5 @@
       "lcovonly"
     ],
     "all": true
-  },
-  "config": {
-    "husky": {
-      "silent": true
-    }
   }
 }
