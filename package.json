@@ -16,7 +16,9 @@
     "prepublish": "npm run lint && npm t && npm run build",
     "precommit": "./scripts/pre-commit.sh"
   },
-  "dependencies": {},
+  "dependencies": {
+    "deep-eql": "^2.0.1"
+  },
   "devDependencies": {
     "@types/chai": "^3.4.35",
     "@types/mocha": "^2.2.39",

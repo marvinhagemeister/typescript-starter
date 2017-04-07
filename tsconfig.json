@@ -12,6 +12,7 @@
     "node_modules"
   ],
   "files": [
+    "./typings/global.d.ts",
     "./src/index.ts"
   ]
 }
