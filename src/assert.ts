@@ -1,4 +1,4 @@
-import deepEql from "deep-eql";
+import * as deepEql from "deep-eql";
 
 export interface Assertions {
   is(a: any, b: any, message?: string): boolean;
@@ -31,7 +31,7 @@ export function assert(
   };
 
   if (!test(actual, expected)) {
-    // TOOD: esacpe string
+    // TOOD: escape string
     res.message = message;
   }
 
@@ -76,7 +76,7 @@ export function isNot(actual: any, expected: any): AssertionResult {
   return res;
 }
 
-export function throws(fn: Function, error?: ErrorConstructor) {
+export function throws(fn: Function, error?: ErrorConstructor): boolean {
   try {
     fn();
     return false;

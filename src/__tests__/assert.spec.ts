@@ -1,5 +1,13 @@
 import { assert as t } from "chai";
-import { assert, isPrimitive, equal, deepEqual } from "../assert";
+import {
+  assert,
+  isPrimitive,
+  equal,
+  deepEqual,
+  is,
+  isNot,
+  throws,
+} from "../assert";
 
 describe("isPrimitive", () => {
   it("should check for primitive", () => {
@@ -67,5 +75,55 @@ describe("deepEqual", () => {
         actual: v,
         expected: v,
       }));
+  });
+});
+
+describe("is", () => {
+  it("should work", () => {
+    t.equal(is(1, 2).message.length > 0, true);
+    t.equal(is(false, true).message.length > 0, true);
+    t.equal(is(false, 0).message.length > 0, true);
+    t.equal(is(false, null).message.length > 0, true);
+    t.equal(is(false, []).message.length > 0, true);
+    t.equal(is({} === {}, true).message.length > 0, true);
+    t.equal(is([2], [1]).message.length > 0, true);
+
+    t.equal(is({}, {}).message, undefined);
+    t.equal(is([], []).message, undefined);
+    t.equal(is([{ foo: "bar" }], [{  foo: "bar" }]).message, undefined);
+  });
+});
+
+describe("isNot", () => {
+  it("should work", () => {
+    t.equal(isNot(1, 2).message, undefined);
+    t.equal(isNot(false, true).message, undefined);
+    t.equal(isNot(false, 0).message, undefined);
+    t.equal(isNot(false, null).message, undefined);
+    t.equal(isNot(false, []).message, undefined);
+    t.equal(isNot({} === {}, true).message, undefined);
+    t.equal(isNot([2], [1]).message, undefined);
+
+    t.equal(isNot({}, {}).message.length > 0, true);
+    t.equal(isNot([], []).message.length > 0, true);
+    t.equal(isNot([{ foo: "bar" }], [{  foo: "bar" }]).message.length > 0, true);
+
+    t.equal(isNot([{ foo: "1" }], [{  foo: "2" }]).message, undefined);
+  });
+});
+
+describe("throws", () => {
+  it("should throw", () => {
+    const fn = () => { throw new Error(); };
+    t.equal(throws(fn), true);
+
+    const fn2 = () => true;
+    t.equal(throws(fn2), false);
+  });
+
+  it("should check error instance", () => {
+    const fn = () => { throw new TypeError(); };
+    t.equal(throws(fn, TypeError), true);
+    t.equal(throws(fn, SyntaxError), false);
   });
 });
