@@ -104,6 +104,9 @@ describe("isNot", () => {
     t.equal(isNot({} === {}, true).message, undefined);
     t.equal(isNot([2], [1]).message, undefined);
 
+    t.equal(isNot(1, 1).message.length > 0, true);
+    t.equal(isNot("foo", "foo").message.length > 0, true);
+    t.equal(isNot(null, null).message.length > 0, true);
     t.equal(isNot({}, {}).message.length > 0, true);
     t.equal(isNot([], []).message.length > 0, true);
     t.equal(isNot([{ foo: "bar" }], [{  foo: "bar" }]).message.length > 0, true);

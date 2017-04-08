@@ -43,7 +43,7 @@ export function equal(actual: any, expected: any): AssertionResult {
     (a, b) => a === b,
     actual,
     expected,
-    `expected ${actual} to equal ${expected}`
+    `expected ${actual} to equal ${expected}`,
   );
 }
 
@@ -70,7 +70,9 @@ export function isNot(actual: any, expected: any): AssertionResult {
   if (res.message !== undefined) {
     delete res.message;
   } else {
-    res.message = `expected ${actual} to not equal ${expected}`;
+    res.message = isPrimitive(actual)
+      ? `expected ${actual} to not equal ${expected}`
+      : `expected ${actual} to not deeply equal ${expected}`;
   }
 
   return res;
