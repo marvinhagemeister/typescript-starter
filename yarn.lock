@@ -1194,6 +1194,10 @@ tsconfig@^6.0.0:
     strip-bom "^3.0.0"
     strip-json-comments "^2.0.0"
 
+tslint-config-sevenval@^0.6.0:
+  version "0.6.0"
+  resolved "https://registry.yarnpkg.com/tslint-config-sevenval/-/tslint-config-sevenval-0.6.0.tgz#65b84877856954fa4bb08ee31f388b9306e39fbd"
+
 tslint@^5.1.0:
   version "5.1.0"
   resolved "https://registry.yarnpkg.com/tslint/-/tslint-5.1.0.tgz#51a47baeeb58956fcd617bd2cf00e2ef0eea2ed9"
