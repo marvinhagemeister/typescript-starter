@@ -1,4 +1,4 @@
-import { assert as t } from "chai";
+import { assert as t } from "chai";
 
 describe("foo", () => {
   it("should return foo", () => {
