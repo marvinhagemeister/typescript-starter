@@ -34,8 +34,8 @@
   },
   "lint-staged": {
     "*.{ts,tsx}": [
+      "prettier --trailing-comma=all --write",
       "npm run lint",
-      "prettier --write",
       "git add"
     ]
   },
