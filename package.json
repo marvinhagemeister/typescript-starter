@@ -18,17 +18,17 @@
   },
   "dependencies": {},
   "devDependencies": {
-    "@types/chai": "^4.0.1",
-    "@types/mocha": "^2.2.41",
-    "chai": "^4.1.0",
+    "@types/chai": "^4.0.4",
+    "@types/mocha": "^2.2.42",
+    "chai": "^4.1.1",
     "husky": "^0.14.3",
-    "lint-staged": "^4.0.2",
-    "mocha": "^3.3.0",
-    "nyc": "^11.0.3",
+    "lint-staged": "^4.0.4",
+    "mocha": "^3.5.0",
+    "nyc": "^11.1.0",
     "prettier": "^1.5.3",
     "rimraf": "^2.6.1",
-    "ts-node": "^3.2.1",
-    "tslint": "^5.5.0",
+    "ts-node": "^3.3.0",
+    "tslint": "^5.7.0",
     "tslint-config-sevenval": "^0.6.3",
     "typescript": "^2.4.2"
   },
@@ -40,7 +40,10 @@
     ]
   },
   "nyc": {
-    "include": ["src/*.ts", "src/**/*.ts"],
+    "include": [
+      "src/*.ts",
+      "src/**/*.ts"
+    ],
     "exclude": [
       "typings",
       "node_modules/",
@@ -48,9 +51,19 @@
       "__tests__/**",
       "**/*.d.ts"
     ],
-    "extension": [".ts"],
-    "require": ["ts-node/register"],
-    "reporter": ["json", "html", "text", "text-summary", "lcovonly"],
+    "extension": [
+      ".ts"
+    ],
+    "require": [
+      "ts-node/register"
+    ],
+    "reporter": [
+      "json",
+      "html",
+      "text",
+      "text-summary",
+      "lcovonly"
+    ],
     "all": true
   }
 }
