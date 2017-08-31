@@ -7,5 +7,6 @@ src/
 .npmignore
 .travis.yml
 .gitignore
+.prettierrc
 tsconfig.json
 tslint.json
