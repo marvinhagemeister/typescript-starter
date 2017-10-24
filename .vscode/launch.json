@@ -18,14 +18,8 @@
       "type": "node",
       "request": "launch",
       "name": "Launch Tests",
-      "program": "${workspaceRoot}/node_modules/mocha/bin/_mocha",
-      "args": [
-        "${relativeFile}",
-        "--colors",
-        "--timeout=9999",
-        "--compilers",
-        "ts:ts-node/register"
-      ],
+      "program": "${workspaceRoot}/node_modules/.bin/jest",
+      "args": ["-i", "${relativeFile}", "--colors"],
       "runtimeExecutable": null,
       "cwd": "${workspaceRoot}",
       "protocol": "inspector",
