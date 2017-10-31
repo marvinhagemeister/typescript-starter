@@ -4,7 +4,9 @@
     "target": "es2017",
     "strict": true,
     "sourceMap": true,
-    "pretty": true
+    "pretty": true,
+    "outDir": "dist/",
+    "declaration": true
   },
   "exclude": ["node_modules"]
 }
