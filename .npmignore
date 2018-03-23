@@ -1,5 +1,6 @@
 node_modules/
 .nyc_output/
+.vscode/
 coverage/
 scripts/
 src/
@@ -8,5 +9,7 @@ src/
 .travis.yml
 .gitignore
 .prettierrc
-tsconfig.json
+tsconfig.*
+*.log
+jest.config.js
 tslint.json
