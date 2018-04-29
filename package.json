@@ -8,9 +8,8 @@
   "scripts": {
     "cleanup": "rimraf dist/",
     "lint": "tslint 'src/**/*.ts' 'src/**/*.tsx'",
-    "watch": "tsc -p tsconfig.build.json -w",
     "build": "npm run cleanup && tsc -p tsconfig.build.json",
-    "test": "tsc -p tsconfig.test.json && jest",
+    "test": "jest",
     "test-watch": "npm t -- --watch",
     "coverage": "npm t -- --coverage",
     "prepublishOnly": "npm run lint && npm t && npm run build",
@@ -18,23 +17,19 @@
   },
   "dependencies": {},
   "devDependencies": {
-    "@types/jest": "^22.2.2",
+    "@types/jest": "^22.2.3",
     "husky": "^0.14.3",
     "jest": "^22.4.3",
-    "lint-staged": "^7.0.0",
-    "prettier": "^1.6.1",
+    "lint-staged": "^7.0.5",
+    "prettier": "^1.12.1",
     "rimraf": "^2.6.1",
-    "ts-jest": "^22.4.2",
-    "ts-node": "^5.0.1",
+    "ts-jest": "^22.4.4",
+    "ts-node": "^6.0.2",
     "tslint": "^5.7.0",
     "tslint-config-sevenval": "^1.0.0",
-    "typescript": "^2.5.2"
+    "typescript": "^2.8.3"
   },
   "lint-staged": {
-    "*.{ts,tsx}": [
-      "prettier --write",
-      "npm run lint",
-      "git add"
-    ]
+    "*.{ts,tsx}": ["prettier --write", "npm run lint", "git add"]
   }
 }
