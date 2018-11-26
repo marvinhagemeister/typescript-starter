@@ -1,19 +1,14 @@
 {
   "extends": "tslint:latest",
   "rules": {
-    "member-access": [
-      false
-    ],
+    "member-access": [false],
     "arrow-parens": false,
-    "interface-name": [
-      false
-    ],
+    "interface-name": [false],
     "no-string-literal": false,
-    "ordered-imports": [
-      false
-    ],
-    "variable-name": [
-      false
-    ]
+    "ordered-imports": [false],
+    "variable-name": [false],
+    "object-literal-sort-keys": false,
+    "no-var-requires": false,
+    "curly": false
   }
 }
